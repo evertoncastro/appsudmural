@@ -23,7 +23,7 @@ angular.module('mobile', ['ionic', 'ngCordova'])
         abstract: true,
         templateUrl: 'templates/menu.html'
         //controller: 'AppCtrl'
-      })
+    })
       .state('app.home', {
         url: '/home',
         views: {
@@ -33,13 +33,21 @@ angular.module('mobile', ['ionic', 'ngCordova'])
           }
         }
       })
-
       .state('app.event', {
         url: '/event',
         views: {
           'menuContent': {
             templateUrl: 'templates/event.html'
             //controller: 'PlaylistCtrl'
+          }
+        }
+      })
+      .state('app.event-details', {
+        url: '/event-details',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/event-details.html',
+            controller: 'EventDetailsCtrl'
           }
         }
       });

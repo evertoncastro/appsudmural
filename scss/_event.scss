@@ -1,0 +1,26 @@
+/* EVENT DETAILS */
+section{
+    article.banner-article{
+        img{
+            width: 100%;
+        }
+        .description{
+            background-color: $royal;
+            margin-top: -5px;
+            p{
+                color: white;
+                text-align: justify;
+                font-weight: 700;
+                padding: 10px 0;
+                margin-left: 10px;
+            }
+        }
+    }
+    article.event-content{
+        margin: 10px;
+        p{
+            color: #383838;
+            text-align: left;
+        }
+    }
+}

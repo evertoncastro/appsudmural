@@ -9750,3 +9750,23 @@ a.button {
 
 .home-area .button-event {
   margin: 0px 0px 0px 0px; }
+
+/* EVENT DETAILS */
+section article.banner-article img {
+  width: 100%; }
+
+section article.banner-article .description {
+  background-color: #886aea;
+  margin-top: -5px; }
+  section article.banner-article .description p {
+    color: white;
+    text-align: justify;
+    font-weight: 700;
+    padding: 10px 0;
+    margin-left: 10px; }
+
+section article.event-content {
+  margin: 10px; }
+  section article.event-content p {
+    color: #383838;
+    text-align: left; }
