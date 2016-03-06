@@ -9763,8 +9763,10 @@ section.event-list article .event-tile {
     text-align: center;
     margin-top: 170px;
     color: white;
-    font-size: 18px;
-    font-weight: 700; }
+    font-size: 16px;
+    font-weight: 700;
+    background-color: rgba(56, 56, 56, 0.5);
+    padding: 6px; }
 
 /* EVENT DETAILS */
 section.event-details article.banner-article img {
