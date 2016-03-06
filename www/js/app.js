@@ -24,24 +24,6 @@ angular.module('mobile', ['ionic', 'ngCordova'])
         templateUrl: 'templates/menu.html'
         //controller: 'AppCtrl'
       })
-
-      .state('app.search', {
-        url: '/search',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/search.html'
-          }
-        }
-      })
-
-      .state('app.browse', {
-        url: '/browse',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/browse.html'
-          }
-        }
-      })
       .state('app.home', {
         url: '/home',
         views: {
@@ -96,4 +78,3 @@ app.directive('imageonload', function ($timeout) {
   }).constant('$ionicLoadingConfig', {
     template: '<ion-spinner icon="bubbles"></ion-spinner>'
   });
-
