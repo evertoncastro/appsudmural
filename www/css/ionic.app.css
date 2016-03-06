@@ -9751,22 +9751,37 @@ a.button {
 .home-area .button-event {
   margin: 0px 0px 0px 0px; }
 
+/* EVENT LIST */
+section.event-list article .event-tile {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  width: 100%;
+  height: 200px; }
+  section.event-list article .event-tile p {
+    text-align: center;
+    margin-top: 170px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700; }
+
 /* EVENT DETAILS */
-section article.banner-article img {
+section.event-details article.banner-article img {
   width: 100%; }
 
-section article.banner-article .description {
+section.event-details article.banner-article .description {
   background-color: #886aea;
   margin-top: -6px; }
-  section article.banner-article .description p {
+  section.event-details article.banner-article .description p {
     color: white;
     text-align: justify;
     font-weight: 700;
     padding: 10px 0;
     margin-left: 10px; }
 
-section article.event-content {
+section.event-details article.event-content {
   margin: 10px; }
-  section article.event-content p {
+  section.event-details article.event-content p {
     color: #383838;
     text-align: left; }

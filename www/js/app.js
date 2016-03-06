@@ -33,12 +33,12 @@ angular.module('mobile', ['ionic', 'ngCordova'])
           }
         }
       })
-      .state('app.event', {
-        url: '/event',
+      .state('app.events', {
+        url: '/events',
         views: {
           'menuContent': {
-            templateUrl: 'templates/event.html'
-            //controller: 'PlaylistCtrl'
+            templateUrl: 'templates/events.html',
+            controller: "EventListCtrl"
           }
         }
       })
