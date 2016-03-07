@@ -1,12 +1,12 @@
 var app = angular.module('mobile');
 
-app.service('serviceEvent', function($q, $http){
+app.service('serviceMessage', function($q, $http){
 
   return {
 
-    loadEvent: function(filter){
+    loadMessage: function(filter){
       var defer = $q.defer();
-      var URL = 'http://sudmural.appspot.com/clientLoadEvent?unityNumber=1&display='+filter;
+      var URL = 'http://sudmural.appspot.com/clientLoadMessage?unityNumber=1&display='+filter;
       $http.get(URL).then(
         function(response){
           defer.resolve(response);
