@@ -2,7 +2,17 @@ var app = angular.module('mobile');
 
 app.service('serviceMessage', function($q, $http){
 
+  var message = undefined;
+
   return {
+
+    getMessage: function(){
+        return message;
+    },
+
+    setMessage: function(data){
+        message = data;
+    },
 
     loadMessage: function(filter){
       var defer = $q.defer();

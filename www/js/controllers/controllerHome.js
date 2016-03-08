@@ -23,5 +23,11 @@ function HomeCtrl($scope, serviceEvent, $state, serviceMessage){
         serviceEvent.setEventInfo(event);
         $state.go("app.event-details");
     };
+
+    $scope.goToMessageDetails = function(message){
+      serviceMessage.setMessage(message);
+      $state.go("app.message-details");
+    };
+
     $scope.init();
 }

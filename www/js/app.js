@@ -50,6 +50,15 @@ angular.module('mobile', ['ionic', 'ngCordova'])
             controller: 'EventDetailsCtrl'
           }
         }
+      })
+      .state('app.message-details', {
+        url: '/message-details',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/message-details.html',
+            controller: 'MessageDetailsCtrl'
+          }
+        }
       });
     $urlRouterProvider.otherwise('app/home');
   }).directive('backImg', function(){
