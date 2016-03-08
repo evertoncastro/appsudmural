@@ -1,0 +1,14 @@
+<ion-view view-title="Mensagens">
+  <ion-content>
+    <section class="event-list">
+      <ul class="list">
+        <li class="item" ng-repeat="message in data.list">
+          <div ng-click="goToMessageDetails(message)">
+            <span>{{message.title}}</span>
+            <span>{{message.dateCreation}}</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </ion-content>
+</ion-view>

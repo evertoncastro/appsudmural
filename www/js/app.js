@@ -51,6 +51,15 @@ angular.module('mobile', ['ionic', 'ngCordova'])
           }
         }
       })
+      .state('app.messages', {
+        url: '/messages',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/messages.html',
+            controller: 'MessageListCtrl'
+          }
+        }
+      })
       .state('app.message-details', {
         url: '/message-details',
         views: {

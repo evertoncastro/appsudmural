@@ -3,9 +3,9 @@ var app = angular.module('mobile');
 app.controller("MessageDetailsCtrl", MessageDetailsCtrl);
 
 function MessageDetailsCtrl($scope, serviceMessage){
-    $scope.data = {};
+    $scope.message = {};
     $scope.init = function(){
-        $scope.data = serviceMessage.getMessage();
+        $scope.message = serviceMessage.getMessage();
     };
 
     $scope.init();
