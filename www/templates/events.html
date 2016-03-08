@@ -1,0 +1,12 @@
+<ion-view view-title="Eventos">
+  <ion-content>
+    <section class="event-list">
+        <article ng-repeat="event in data.list">
+            <div class="event-tile" style="background-image: url({{event.image}})" ng-click="goToEventDetails(event)">
+                <p>{{event.title}}</p>
+            </div>
+        </article>
+
+    </section>
+  </ion-content>
+</ion-view>

@@ -23,25 +23,7 @@ angular.module('mobile', ['ionic', 'ngCordova'])
         abstract: true,
         templateUrl: 'templates/menu.html'
         //controller: 'AppCtrl'
-      })
-
-      .state('app.search', {
-        url: '/search',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/search.html'
-          }
-        }
-      })
-
-      .state('app.browse', {
-        url: '/browse',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/browse.html'
-          }
-        }
-      })
+    })
       .state('app.home', {
         url: '/home',
         views: {
@@ -51,13 +33,21 @@ angular.module('mobile', ['ionic', 'ngCordova'])
           }
         }
       })
-
-      .state('app.event', {
-        url: '/event',
+      .state('app.events', {
+        url: '/events',
         views: {
           'menuContent': {
-            templateUrl: 'templates/event.html'
-            //controller: 'PlaylistCtrl'
+            templateUrl: 'templates/events.html',
+            controller: "EventListCtrl"
+          }
+        }
+      })
+      .state('app.event-details', {
+        url: '/event-details',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/event-details.html',
+            controller: 'EventDetailsCtrl'
           }
         }
       });
@@ -96,4 +86,3 @@ app.directive('imageonload', function ($timeout) {
   }).constant('$ionicLoadingConfig', {
     template: '<ion-spinner icon="bubbles"></ion-spinner>'
   });
-

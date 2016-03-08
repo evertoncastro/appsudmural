@@ -1,32 +1,20 @@
-<ion-view view-title="MURAL">
+<ion-view view-title="Mural">
   <ion-content>
     <div class="home-area">
       <ion-slide-box show-pager="false" does-continue="true" auto-play="true" slide-interval="5000"
-                     on-slide-changed="slideHasChanged($index)" ng-if="messageList.length>0">
-        <ion-slide ng-repeat="message in messageList">
-          <img class="slide-box-image" ng-src="{{message.image}}">
-          <div class="banner-text-area">
-            <span class="banner-text">{{message.title}}</span>
-          </div>
-        </ion-slide>
-      </ion-slide-box>
-      <div>
-        <button class="button button-full button-royal button-event">
-          Mais Mensagens
-        </button>
-      </div>
-      <ion-slide-box show-pager="false" does-continue="true" auto-play="true" slide-interval="5000"
                      on-slide-changed="slideHasChanged($index)" ng-if="eventList.length>0">
         <ion-slide ng-repeat="event in eventList">
-          <img class="slide-box-image" ng-src="{{event.image}}">
-          <div class="banner-text-area">
-            <span class="banner-text">{{event.title}}</span>
-          </div>
+            <div ng-click="goToEventDetails(event)">
+                <img class="slide-box-image" ng-src="{{event.image}}">
+                <div class="banner-text-area">
+                  <span class="banner-text">{{event.title}}</span>
+                </div>
+            </div>
         </ion-slide>
       </ion-slide-box>
       <div>
-        <button class="button button-full button-royal button-event">
-          Mais Eventos & Atividades
+        <button class="button button-full button-royal button-event" ui-sref="app.events">
+          Eventos & Atividades
         </button>
       </div>
     </div>

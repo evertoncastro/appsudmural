@@ -1,6 +1,6 @@
 angular.module('mobile').controller('HomeCtrl', HomeCtrl);
 
-function HomeCtrl($scope, serviceEvent, serviceMessage){
+function HomeCtrl($scope, serviceEvent, $state, serviceMessage){
 
     $scope.eventList = [];
 
@@ -19,5 +19,9 @@ function HomeCtrl($scope, serviceEvent, serviceMessage){
 
     };
 
+    $scope.goToEventDetails = function(event){
+        serviceEvent.setEventInfo(event);
+        $state.go("app.event-details");
+    };
     $scope.init();
 }
