@@ -1,19 +1,19 @@
-<ion-view view-title="Detalhes da mensagem">
+<ion-view view-title="Mensagem">
     <ion-content>
-        <section class="event-details">
+        <section class="message-details">
           <div class="list card">
-            <div class="item item-avatar">
-              <span>{{message.title}}</span>
+            <div class="item box-message-title">
+              <span class="message-title">{{message.title}}</span>
             </div>
-            <div class="item item-avatar">
-              <img >
-              <h2>Marty McFly</h2>
+            <div class="item item-avatar item-avatar-message">
+              <img class="message-person-image" ng-src="{{person.image}}">
+              <h2>{{person.exibitionName}}</h2>
               <p>{{message.dateCreation}}</p>
             </div>
 
             <div class="item item-body">
-              <img class="full-image" ng-src="{{message.image}}">
-              <p>{{message.text}}</p>
+              <img class="full-image message-detail-image" ng-if="message.image" ng-src="{{message.image}}">
+              <p class="message-detail-text">{{message.text}}</p>
             </div>
 
           </div>

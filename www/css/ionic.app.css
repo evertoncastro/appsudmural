@@ -9787,3 +9787,34 @@ section.event-details article.event-content {
   section.event-details article.event-content p {
     color: #383838;
     text-align: left; }
+
+/* MESSAGE DETAILS */
+section.message-details .box-message-title {
+  padding: 6px 16px 6px 16px;
+  text-align: justify; }
+
+section.message-details .message-title {
+  font-weight: 600;
+  color: #888;
+  white-space: normal;
+  text-transform: initial;
+  font-size: 14px; }
+
+section.message-details .item-avatar-message {
+  padding-left: 80px; }
+
+section.message-details .message-person-image {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+  top: 5px;
+  max-width: 100%;
+  max-height: 100%; }
+
+section.message-details .message-detail-image {
+  border-radius: 5px;
+  margin: 0px 0px 16px 0px; }
+
+section.message-details .message-detail-text {
+  text-indent: 1.5em;
+  margin: 0px 0px 0px 0px; }
