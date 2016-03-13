@@ -9841,3 +9841,20 @@ section.message-details .message-detail-image {
 section.message-details .message-detail-text {
   text-indent: 1.5em;
   margin: 0px 0px 0px 0px; }
+
+i.ion-android-more-vertical {
+  font-size: 29px;
+  margin: -7px 0px 0 0;
+  padding: 10px; }
+
+/* Config popover styles */
+.popover {
+  height: 46px !important;
+  background-color: #6b46e5 !important; }
+  .popover .list .item {
+    background-color: #6b46e5 !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white; }
+  .popover .list .activated {
+    opacity: 0.6; }
