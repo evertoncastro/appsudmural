@@ -16,9 +16,25 @@
   .banner-text{
     color: #ffffff;
   }
-
   .button-event{
     margin: 0px 0px 0px 0px;
+  }
+  .home-list-access{
+    background-color: #6b46e5;
+    position: relative;
+    .item{
+      background-color: transparent;
+      border: none;
+      color: #ffffff;
+    }
+  }
+  .home-access-arrow{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 25px;
+    margin: -12px 0px 0px 0px;
+    color: #ffffff;
   }
 }
 

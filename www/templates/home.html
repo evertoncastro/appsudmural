@@ -12,10 +12,12 @@
             </div>
         </ion-slide>
       </ion-slide-box>
-      <div>
-        <button class="button button-full button-royal button-event" ui-sref="app.events">
+      <div class="home-list-access">
+        <a class="item item-icon-left" ui-sref="app.events">
+          <i class="icon ion-ios-people-outline"></i>
           Eventos & Atividades
-        </button>
+        </a>
+        <i class="home-access-arrow ion-ios-arrow-right"></i>
       </div>
       <ion-slide-box show-pager="false" does-continue="true" auto-play="true" slide-interval="5000"
                      on-slide-changed="slideHasChanged($index)" ng-if="messageList.length>0">
@@ -28,16 +30,13 @@
           </div>
         </ion-slide>
       </ion-slide-box>
-      <div>
-        <button class="button button-full button-royal button-event" ng-click="goToMessageList()">
+      <div class="home-list-access">
+        <a class="item item-icon-left" ng-click="goToMessageList()">
+          <i class="icon ion-document"></i>
           Mensagens
-        </button>
+        </a>
+        <i class="home-access-arrow ion-ios-arrow-right"></i>
       </div>
     </div>
-    <!--<ion-list>
-      <ion-item>
-
-      </ion-item>
-    </ion-list>-->
   </ion-content>
 </ion-view>

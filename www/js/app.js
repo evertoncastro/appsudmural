@@ -13,9 +13,10 @@ angular.module('mobile', ['ionic', 'ngCordova'])
         StatusBar.styleDefault();
       }
     });
+
   })
 
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     $stateProvider
 
       .state('app', {
@@ -70,6 +71,9 @@ angular.module('mobile', ['ionic', 'ngCordova'])
         }
       });
     $urlRouterProvider.otherwise('app/home');
+    $ionicConfigProvider.backButton.previousTitleText(false);
+    $ionicConfigProvider.backButton.text('voltar');
+    $ionicConfigProvider.navBar.alignTitle('center');
   }).directive('backImg', function(){
     return function(scope, element, attrs){
       var url = attrs.backImg;
