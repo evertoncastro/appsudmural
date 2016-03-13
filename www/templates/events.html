@@ -1,12 +1,15 @@
 <ion-view view-title="Eventos">
   <ion-content>
     <section class="event-list">
-        <article ng-repeat="event in data.list">
-            <div class="event-tile" style="background-image: url({{event.image}})" ng-click="goToEventDetails(event)">
-                <p>{{event.title}}</p>
-            </div>
-        </article>
-
+      <ul class="list ">
+        <li class="item item-event-list" ng-repeat="event in data.list">
+          <div ng-click="goToEventDetails(event)">
+            <p class="event-list-title">{{event.title}}</p>
+            <p>{{event.date}}</p>
+            <i class="event-detail-arrow ion-ios-arrow-right"></i>
+          </div>
+        </li>
+      </ul>
     </section>
   </ion-content>
 </ion-view>

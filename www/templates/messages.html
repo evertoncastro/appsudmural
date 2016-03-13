@@ -1,11 +1,12 @@
 <ion-view view-title="Mensagens">
   <ion-content>
-    <section class="event-list">
+    <section class="message-list">
       <ul class="list">
-        <li class="item" ng-repeat="message in data.list">
+        <li class="item item-message-list" ng-repeat="message in data.list">
           <div ng-click="goToMessageDetails(message)">
-            <span>{{message.title}}</span>
-            <span>{{message.dateCreation}}</span>
+            <p class="message-list-title">{{message.title}}</p>
+            <p>{{message.dateCreation}}</p>
+            <i class="message-detail-arrow ion-ios-arrow-right"></i>
           </div>
         </li>
       </ul>

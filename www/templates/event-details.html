@@ -1,15 +1,28 @@
-<ion-view view-title="Detalhes do evento">
+<ion-view view-title="Evento">
     <ion-content>
-        <section class="event-details">
-            <article class="banner-article">
-                <img ng-src="{{data.image}}">
-                <div class="description">
-                    <p>{{data.title}}</p>
-                </div>
-            </article>
-            <article class="event-content">
-                <p>{{data.description}}</p>
-            </article>
-        </section>
+      <div class="box-event-detail">
+        <div class="list card">
+          <div class="item">
+            <p class="event-detail-title">{{data.title}}</p>
+            <p>{{data.dateShow}}</p>
+          </div>
+
+          <div class="item item-image" ng-if="data.image">
+            <img ng-src="{{data.image}}">
+          </div>
+
+          <a class="item item-icon-left">
+            <i class="icon ion-ios-location-outline"></i>
+            {{data.place}}
+          </a>
+          <a class="item item-icon-left">
+            <i class="icon ion-ios-time-outline"></i>
+            {{data.time}}
+          </a>
+          <div class="item-event-detail-description" ng-if="data.description">
+            <p>{{data.description}}</p>
+          </div>
+        </div>
+      </div>
     </ion-content>
 </ion-view>
