@@ -74,6 +74,7 @@ angular.module('mobile', ['ionic', 'ngCordova'])
     $ionicConfigProvider.backButton.previousTitleText(false);
     $ionicConfigProvider.backButton.text('voltar');
     $ionicConfigProvider.navBar.alignTitle('center');
+    if(!ionic.Platform.isIOS())$ionicConfigProvider.scrolling.jsScrolling(false);
   }).directive('backImg', function(){
     return function(scope, element, attrs){
       var url = attrs.backImg;
