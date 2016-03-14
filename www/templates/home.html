@@ -1,6 +1,6 @@
 <ion-view view-title="Mural">
   <ion-content>
-    <div class="home-area">
+    <div class="home-area" ng-if="showBox">
       <ion-slide-box show-pager="false" does-continue="true" auto-play="true" slide-interval="5000"
                      on-slide-changed="slideHasChanged($index)" ng-if="eventList.length>0">
         <ion-slide ng-repeat="event in eventList">

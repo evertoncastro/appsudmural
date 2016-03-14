@@ -1,21 +1,33 @@
 angular.module('mobile').controller('HomeCtrl', HomeCtrl);
 
-function HomeCtrl($scope, serviceEvent, $state, serviceMessage){
+function HomeCtrl($scope, serviceEvent, $state, serviceMessage, $ionicLoading, $timeout){
 
     $scope.eventList = [];
+    $scope.messageList = [];
 
     $scope.init = function(){
+      $ionicLoading.show();
       serviceEvent.loadEvent('banner').then(
-        function(response){
-          $scope.eventList = response.data;
+        function(responseEvent){
+          serviceMessage.loadMessage('banner').then(
+            function(responseMessage){
+              $scope.eventList = responseEvent.data;
+              $scope.messageList = responseMessage.data;
+              $timeout(function() {
+                $ionicLoading.hide();
+              }, 1000);
+              $scope.showBox = true;
+            },
+            function(){
+              $ionicLoading.hide();
+            }
+          );
+        },
+        function(){
+          $ionicLoading.hide();
         }
       );
 
-      serviceMessage.loadMessage('banner').then(
-        function(response){
-          $scope.messageList = response.data;
-        }
-      );
 
     };
 
