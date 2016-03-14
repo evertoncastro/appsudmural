@@ -1,0 +1,22 @@
+i.ion-android-more-vertical{
+    font-size: 29px;
+    margin: -7px 0px 0 0;
+    padding: 10px;
+}
+
+/* Config popover styles */
+.popover{
+    height: 46px !important;
+    background-color: $royal !important;
+    .list{
+        .item{
+            background-color: $royal !important;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: white;
+        }
+        .activated{
+            opacity: 0.6;
+        }
+    }
+}

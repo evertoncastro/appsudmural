@@ -1,110 +1,111 @@
 
 angular.module('mobile', ['ionic', 'ngCordova'])
 
-  .run(function($ionicPlatform) {
+.run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
 
-      if (window.cordova && window.cordova.plugins.Keyboard) {
-        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-        cordova.plugins.Keyboard.disableScroll(true);
+        if (window.cordova && window.cordova.plugins.Keyboard) {
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+            cordova.plugins.Keyboard.disableScroll(true);
 
-      }
-      if (window.StatusBar) {
-        StatusBar.styleDefault();
-      }
+        }
+        if (window.StatusBar) {
+            StatusBar.styleDefault();
+        }
     });
 
-  })
+})
 
-  .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     $stateProvider
 
-      .state('app', {
+    .state('app', {
         url: '/app',
         abstract: true,
-        templateUrl: 'templates/menu.html'
-        //controller: 'AppCtrl'
+        templateUrl: 'templates/menu.html',
+        controller: 'MenuCtrl'
     })
-      .state('app.home', {
+    .state('app.home', {
         url: '/home',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/home.html',
-            controller: 'HomeCtrl'
-          }
+            'menuContent': {
+                templateUrl: 'templates/home.html',
+                controller: 'HomeCtrl'
+            }
         }
-      })
-      .state('app.events', {
+    })
+    .state('app.events', {
         url: '/events',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/events.html',
-            controller: "EventListCtrl"
-          }
+            'menuContent': {
+                templateUrl: 'templates/events.html',
+                controller: "EventListCtrl"
+            }
         }
-      })
-      .state('app.event-details', {
+    })
+    .state('app.event-details', {
         url: '/event-details',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/event-details.html',
-            controller: 'EventDetailsCtrl'
-          }
+            'menuContent': {
+                templateUrl: 'templates/event-details.html',
+                controller: 'EventDetailsCtrl'
+            }
         }
-      })
-      .state('app.messages', {
+    })
+    .state('app.messages', {
         url: '/messages',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/messages.html',
-            controller: 'MessageListCtrl'
-          }
+            'menuContent': {
+                templateUrl: 'templates/messages.html',
+                controller: 'MessageListCtrl'
+            }
         }
-      })
-      .state('app.message-details', {
+    })
+    .state('app.message-details', {
         url: '/message-details',
         views: {
-          'menuContent': {
-            templateUrl: 'templates/message-details.html',
-            controller: 'MessageDetailsCtrl'
-          }
+            'menuContent': {
+                templateUrl: 'templates/message-details.html',
+                controller: 'MessageDetailsCtrl'
+            }
         }
-      });
+    });
     $urlRouterProvider.otherwise('app/home');
     $ionicConfigProvider.backButton.previousTitleText(false);
     $ionicConfigProvider.backButton.text('voltar');
     $ionicConfigProvider.navBar.alignTitle('center');
-  }).directive('backImg', function(){
+    if(!ionic.Platform.isIOS())$ionicConfigProvider.scrolling.jsScrolling(false);
+}).directive('backImg', function(){
     return function(scope, element, attrs){
-      var url = attrs.backImg;
-      element.css({
-        'background-image': 'url(' + url +')' ,
-        'background-size' : 'cover'
-      });
+        var url = attrs.backImg;
+        element.css({
+            'background-image': 'url(' + url +')' ,
+            'background-size' : 'cover'
+        });
     };
-  });
+});
 
 var app = angular.module('mobile');
 
 app.directive('imageonload', function ($timeout) {
     return {
-      restrict: 'A',
-      require: '?ngModel',
-      scope: {
-        ngModel: '='
-      },
-      link: function (scope, element) {
-        element.bind('load', function () {
-          scope.ngModel = true;
-        });
+        restrict: 'A',
+        require: '?ngModel',
+        scope: {
+            ngModel: '='
+        },
+        link: function (scope, element) {
+            element.bind('load', function () {
+                scope.ngModel = true;
+            });
 
-        // in any kind of situation this will remove spinner image....
-        $timeout(function () {
-          //element.addClass('spinner-hide');
-          scope.ngModel = true;
-        }, 3000);
-      }
+            // in any kind of situation this will remove spinner image....
+            $timeout(function () {
+                //element.addClass('spinner-hide');
+                scope.ngModel = true;
+            }, 3000);
+        }
     };
-  }).constant('$ionicLoadingConfig', {
+}).constant('$ionicLoadingConfig', {
     template: '<ion-spinner icon="bubbles"></ion-spinner>'
-  });
+});
