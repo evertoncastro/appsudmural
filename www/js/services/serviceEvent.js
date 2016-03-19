@@ -9,9 +9,9 @@ app.service('serviceEvent', function($q, $http){
         getEventInfo: function(){
             return eventInfo;
         },
-        loadEvent: function(){
+        loadEvent: function(filter){ //filter empty loads all events
             var defer = $q.defer();
-            var URL = 'http://sudmural.appspot.com/clientLoadEvent?unityNumber=1';
+            var URL = 'http://sudmural.appspot.com/clientLoadEvent?unityNumber=1&display='+filter;
             $http.get(URL).then(
                 function(response){
                     defer.resolve(response);

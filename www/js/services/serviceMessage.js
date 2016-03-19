@@ -14,7 +14,7 @@ app.service('serviceMessage', function($q, $http){
         message = data;
     },
 
-    loadMessage: function(filter){
+    loadMessage: function(filter){ //filter empty loads all messages
       var defer = $q.defer();
       var URL = 'http://sudmural.appspot.com/clientLoadMessage?unityNumber=1&display='+filter;
       $http.get(URL).then(

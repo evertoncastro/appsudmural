@@ -6,7 +6,7 @@ function EventListCtrl($scope, serviceEvent, $ionicLoading, $state){
     $scope.data = {};
     $scope.init = function(){
         $ionicLoading.show();
-        serviceEvent.loadEvent().then(
+        serviceEvent.loadEvent('').then(
             function(resp){
                 $ionicLoading.hide();
                 $scope.data.list = resp.data;
