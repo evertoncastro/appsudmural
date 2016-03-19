@@ -18,5 +18,6 @@ function MessageListCtrl($scope, serviceMessage, $ionicLoading, $state){
         serviceMessage.setMessage(message);
         $state.go("app.message-details");
     };
+
     $scope.init();
 }
