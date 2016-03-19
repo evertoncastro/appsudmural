@@ -2,7 +2,12 @@ var app = angular.module('mobile');
 
 app.controller("MenuCtrl", MenuCtrl);
 
-function MenuCtrl($scope, $ionicPopover){
+function MenuCtrl($scope, $ionicPopover, $state){
+
+    $scope.goToSuggestions = function(){
+        $state.go('app.suggestions');
+    };
+
     $scope.openWhatsApp = function(){
         cordova.plugins.Whatsapp.send("11985694648");
     };

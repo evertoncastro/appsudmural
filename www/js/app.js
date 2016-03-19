@@ -69,6 +69,14 @@ angular.module('mobile', ['ionic', 'ngCordova'])
                 controller: 'MessageDetailsCtrl'
             }
         }
+    }).state('app.suggestions', {
+        url: '/suggestions',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/suggestions.html',
+            controller: 'SuggestionsCtrl'
+          }
+        }
     });
     $urlRouterProvider.otherwise('app/home');
     $ionicConfigProvider.backButton.previousTitleText(false);
