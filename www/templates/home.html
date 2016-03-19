@@ -1,4 +1,4 @@
-<ion-view view-title="Mural">
+<ion-view view-title="Mural" cache-view="true">
   <ion-content>
     <div class="home-area" ng-if="showBox">
       <ion-slide-box show-pager="false" does-continue="true" auto-play="true" slide-interval="5000"
@@ -12,7 +12,7 @@
             </div>
         </ion-slide>
       </ion-slide-box>
-      <div class="home-list-access">
+      <div class="home-list-access" ng-if="eventList.length>0">
         <a class="item item-icon-left" ui-sref="app.events">
           <i class="icon ion-ios-people-outline"></i>
           Eventos & Atividades
@@ -30,7 +30,7 @@
           </div>
         </ion-slide>
       </ion-slide-box>
-      <div class="home-list-access">
+      <div class="home-list-access" ng-if="messageList.length>0">
         <a class="item item-icon-left" ng-click="goToMessageList()">
           <i class="icon ion-document"></i>
           Mensagens

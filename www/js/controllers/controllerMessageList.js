@@ -20,4 +20,5 @@ function MessageListCtrl($scope, serviceMessage, $ionicLoading, $state){
     };
 
     $scope.init();
+
 }
