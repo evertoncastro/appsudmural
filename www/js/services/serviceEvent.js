@@ -14,7 +14,7 @@ app.service('serviceEvent', function($q, $http){
             var URL = 'http://sudmural.appspot.com/clientLoadEvent?unityNumber=1&display='+filter;
             $http.get(URL).then(
                 function(response){
-                    defer.resolve(response);
+                  defer.resolve(response);
                 },
                 function(error){
                     defer.reject(error);

@@ -3,6 +3,7 @@
     width: 100%;
     margin: auto;
     display: block;
+    border: 1px solid #fff;
   }
   .banner-text-area{
     display: block;
@@ -28,6 +29,43 @@
       color: #ffffff;
     }
   }
+  .home-list-access-full{
+    position: relative;
+    height: auto;
+    border-bottom: 0px solid #6b46e5;
+    margin: 0px 0px -5px 0px;
+
+    .home-list-access-full-image{
+      width: 100%;
+    }
+    .item{
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      text-align: center;
+      padding: 16px;
+      font-weight: 900;
+      font-size: 22px;
+    }
+    .ion-document{
+      color: #6b46e5;
+      font-size: 160px;
+      position: absolute;
+      left: 50%;
+      margin: 0px 0px 0px -47px;
+    }
+    .ion-ios-arrow-right{
+      color: #fff;
+      font-size: 40px;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      margin: -20px 0px 0px 0px;
+    }
+  }
   .home-access-arrow{
     position: absolute;
     top: 50%;
@@ -37,5 +75,3 @@
     color: #ffffff;
   }
 }
-
-

@@ -12,11 +12,13 @@ angular.module('mobile', ['ionic', 'ngCordova'])
         if (window.StatusBar) {
             StatusBar.styleDefault();
         }
+
     });
 
 })
 
-.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider, $httpProvider) {
+    //$httpProvider.defaults.timeout = 10000;
     $stateProvider
 
     .state('app', {
@@ -69,12 +71,12 @@ angular.module('mobile', ['ionic', 'ngCordova'])
                 controller: 'MessageDetailsCtrl'
             }
         }
-    }).state('app.suggestions', {
-        url: '/suggestions',
+    }).state('app.colaboration', {
+        url: '/colaboration',
         views: {
           'menuContent': {
-            templateUrl: 'templates/suggestions.html',
-            controller: 'SuggestionsCtrl'
+            templateUrl: 'templates/colaboration.html',
+            controller: 'ColaborationCtrl'
           }
         }
     });

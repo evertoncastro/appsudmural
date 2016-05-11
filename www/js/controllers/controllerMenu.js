@@ -4,8 +4,12 @@ app.controller("MenuCtrl", MenuCtrl);
 
 function MenuCtrl($scope, $ionicPopover, $state){
 
-    $scope.goToSuggestions = function(){
-        $state.go('app.suggestions');
+    $scope.goToColaboration = function(){
+        $state.go('app.colaboration');
+    };
+
+    $scope.goToHome = function(){
+      $state.go('app.home');
     };
 
     $scope.openWhatsApp = function(){

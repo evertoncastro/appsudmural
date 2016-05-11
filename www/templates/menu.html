@@ -8,9 +8,9 @@
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
       </ion-nav-buttons>
-      <ion-nav-buttons side="right">
+     <!-- <ion-nav-buttons side="right">
           <i class="ion-android-more-vertical" ng-click="openPopover($event)"></i>
-      </ion-nav-buttons>
+      </ion-nav-buttons>-->
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
 
@@ -23,8 +23,11 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item menu-close ng-click="goToSuggestions()">
-          Sugestões
+        <ion-item menu-close ng-click="goToHome()">
+          Home
+        </ion-item>
+        <ion-item menu-close ng-click="goToColaboration()">
+          Colabore
         </ion-item>
       </ion-list>
     </ion-content>

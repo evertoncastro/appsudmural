@@ -1,11 +1,11 @@
 <ion-view view-title="Mural" cache-view="true">
   <ion-content>
     <div class="home-area" ng-if="showBox">
-      <ion-slide-box show-pager="false" does-continue="true" auto-play="true" slide-interval="5000"
+      <ion-slide-box ng-if="eventList.length>0" show-pager="true" does-continue="true" auto-play="true" slide-interval="5000"
                      on-slide-changed="slideHasChanged($index)" ng-if="eventList.length>0">
         <ion-slide ng-repeat="event in eventList">
-            <div ng-click="goToEventDetails(event)">
-                <img class="slide-box-image" ng-src="{{event.image}}">
+            <div>
+                <img class="slide-box-image" ng-src="{{event.image}}" ng-click="goToEventDetails(event)">
                 <div class="banner-text-area">
                   <span class="banner-text">{{event.title}}</span>
                 </div>
@@ -19,11 +19,20 @@
         </a>
         <i class="home-access-arrow ion-ios-arrow-right"></i>
       </div>
-      <ion-slide-box show-pager="false" does-continue="true" auto-play="true" slide-interval="5000"
+
+      <div class="home-list-access-full" ng-if="eventList.length<1" ui-sref="app.events">
+        <img src="img/message_background.png" class="home-list-access-full-image">
+        <a class="item item-icon-left">
+          Eventos & Atividades
+        </a>
+        <i class="home-access-arrow ion-ios-arrow-right"></i>
+      </div>
+
+      <ion-slide-box ng-if="messageList.length>0" show-pager="true" does-continue="true" auto-play="true" slide-interval="5000"
                      on-slide-changed="slideHasChanged($index)" ng-if="messageList.length>0">
         <ion-slide ng-repeat="message in messageList">
-          <div ng-click="goToMessageDetails(message)">
-            <img class="slide-box-image" ng-src="{{message.image}}">
+          <div>
+            <img class="slide-box-image" ng-src="{{message.image}}" ng-click="goToMessageDetails(message)">
             <div class="banner-text-area">
               <span class="banner-text">{{message.title}}</span>
             </div>
@@ -33,6 +42,14 @@
       <div class="home-list-access" ng-if="messageList.length>0">
         <a class="item item-icon-left" ng-click="goToMessageList()">
           <i class="icon ion-document"></i>
+          Mensagens
+        </a>
+        <i class="home-access-arrow ion-ios-arrow-right"></i>
+      </div>
+
+      <div class="home-list-access-full" ng-if="messageList.length<1" ng-click="goToMessageList()">
+        <img src="img/message_background.png" class="home-list-access-full-image">
+        <a class="item item-icon-left">
           Mensagens
         </a>
         <i class="home-access-arrow ion-ios-arrow-right"></i>
