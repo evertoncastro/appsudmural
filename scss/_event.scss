@@ -4,6 +4,9 @@ section.event-list{
   .item-event-list{
     padding: 10px 25px 10px 10px;
   }
+  .item-event-list.activated{
+    background-color: #ddd;
+  }
   .event-list-title{
     font-size: 16px;
     font-weight: 600;

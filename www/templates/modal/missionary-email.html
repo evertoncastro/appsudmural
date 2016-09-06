@@ -1,0 +1,30 @@
+<ion-modal-view id="wrapper-modal-missionary-email">
+    <ion-header-bar>
+        <h1 class="title title-modal">Enviar email</h1>
+        <button class="close-modal-email-missionary" ng-click="closeModal()">
+            Fechar
+        </button>
+    </ion-header-bar>
+    <ion-content class="modal-content">
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Nome</span>
+          <input ng-model="data.senderName" type="text" placeholder="Informe seu nome">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Remetente</span>
+          <input ng-model="data.sender" type="email" placeholder="Informe seu email">
+        </label>
+      </div>
+      <div class="box-text-area">
+        <textarea placeholder="Escreva aqui..." ng-model="data.content" class="email-text-area" rows="14">
+
+        </textarea>
+      </div>
+
+
+      <button class="button missionary-modal-buton" ng-click="sendEmail()">
+        Enviar
+      </button>
+    </ion-content>
+</ion-modal-view>

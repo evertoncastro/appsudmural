@@ -1,0 +1,125 @@
+/* missionary LIST */
+section.missionary-list{
+  p{
+    font-size: 16px;
+    line-height: 25px;
+  }
+  color: #666;
+  .item-missionary-list{
+    padding: 10px 25px 10px 10px;
+  }
+  .missionary-list-title{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .missionary-image{
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+    top: 5px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .missionary-detail-arrow{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 25px;
+    margin: -15px 0px 0px 0px;
+    color: $default-color;
+  }
+}
+
+/* missionary DETAILS */
+section.missionary-details{
+    p{
+      font-size: 16px;
+      line-height: 25px;
+    }
+    .box-missionary-title{
+      padding: 6px 16px 6px 16px;
+    }
+    .missionary-title{
+      color: #888;
+      white-space: normal;
+      text-transform: initial;
+      font-size: 16px;
+    }
+    .item-avatar-missionary{
+      padding-left: 110px;
+      min-height: 110px;
+
+    }
+    .missionary-detail-image{
+      width: 50px;
+      height: auto;
+      border-radius: 5px;
+      top: 5px;
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .missionary-detail-image{
+      width: 80px;
+      border-radius: 5px;
+      margin: 0px 0px 16px 0px;
+    }
+    .missionary-detail-text{
+      margin: 0px 0px 0px 0px;
+      text-indent: 0em;
+    }
+
+  .button-send-missionary-email{
+    background-color: $default-color;
+    color: #fff;
+    display: block;
+    margin: 20px auto 0 auto;
+  }
+
+  .button-send-missionary-email.activated{
+    background-color: $default-middle;
+  }
+
+}
+
+
+//MODAL
+
+.missionary-modal-email-content{
+
+
+
+
+}
+
+.email-text-area{
+  width: 100%;
+  background-color: #ebebeb;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px 5px;
+}
+
+.box-text-area{
+  padding: 0px 16px 0px 16px;
+}
+
+.missionary-modal-buton{
+  background-color: $default-color;
+  color: #fff;
+  display: block;
+  margin: 10px auto 0 auto;
+}
+
+.missionary-modal-buton.activated{
+  background-color: $default-middle;
+}
+.missionary-modal-buton:hover{
+  color: #fff !important;
+}
+
+.close-modal-email-missionary{
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-weight: 800 !important;
+}

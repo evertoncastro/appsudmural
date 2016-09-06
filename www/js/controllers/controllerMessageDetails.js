@@ -7,7 +7,7 @@ function MessageDetailsCtrl($scope, serviceMessage, servicePerson, $ionicLoading
     $scope.init = function(){
         $ionicLoading.show();
         var message = serviceMessage.getMessage();
-        servicePerson.loadPersonInfo(message.personUrlSafe).then(
+        servicePerson.loadPersonInfo(message.person_id).then(
           function(data){
             $scope.person = data;
             $scope.message = message;

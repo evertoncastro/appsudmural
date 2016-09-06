@@ -1,0 +1,16 @@
+<ion-view view-title="Missionários">
+  <ion-content>
+    <section class="missionary-list">
+      <ul class="list">
+        <div class="list card" ng-click="goToMissionaryDetails(missionary)" ng-repeat="missionary in data.list">
+          <div class="item item-avatar item-avatar-missionary">
+            <img class="missionary-image" ng-src="{{missionary.image}}">
+            <h2>{{missionary.exibitionName}}</h2>
+            <p>Ala: {{missionary.unityName}}</p>
+            <i class="missionary-detail-arrow ion-ios-arrow-right"></i>
+          </div>
+        </div>
+      </ul>
+    </section>
+  </ion-content>
+</ion-view>

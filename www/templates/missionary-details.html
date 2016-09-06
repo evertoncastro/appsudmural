@@ -1,0 +1,23 @@
+<ion-view view-title="Missionário">
+    <ion-content class="missionary-modal-email-content">
+        <section class="missionary-details">
+          <div class="list card">
+            <div class="item item-avatar item-avatar-missionary">
+              <img class="missionary-detail-image" ng-src="{{missionary.image}}">
+              <h2>{{missionary.exibitionName}}</h2>
+              <p>Ala: {{missionary.unityName}}</p>
+            </div>
+            <div class="item item-body">
+              <p class="missionary-detail-text">Nome: {{missionary.firstname}} {{missionary.lastname}}</p>
+              <p class="missionary-detail-text">Missão: {{missionary.mission}}</p>
+              <p class="missionary-detail-text">Período: {{missionary.period_serving}}</p>
+              <p class="missionary-detail-text">Endereço: {{missionary.address}}</p>
+              <p class="missionary-detail-text">Email: {{missionary.email}}</p>
+            </div>
+          </div>
+          <button class="button button-send-missionary-email" ng-click="openModal()">
+            Enviar email
+          </button>
+        </section>
+    </ion-content>
+</ion-view>

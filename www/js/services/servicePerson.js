@@ -14,9 +14,9 @@ app.service('servicePerson', function($q, $http){
         message = data;
     },
 
-    loadPersonInfo: function(personUrl){
+    loadPersonInfo: function(id){
       var defer = $q.defer();
-      var URL = 'http://sudmural.appspot.com/clientLoadPerson?personUrlSafe='+personUrl;
+      var URL = 'http://sudmural.appspot.com/clientLoadPerson?id='+id;
       $http.get(URL).then(
         function(response){
           defer.resolve(response.data);

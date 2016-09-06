@@ -16,7 +16,7 @@ app.service('serviceColaboration', function($q, $cordovaEmailComposer){
         if(type=='suggestion'){
           email = {
             to: 'educa.appcentral@gmail.com',
-            subject: 'Sugest√µes para o aplicativo Sud Mural',
+            subject: 'Sugestıes para o aplicativo Sud Mural',
             body: '',
             isHtml: false
           };

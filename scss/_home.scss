@@ -1,14 +1,17 @@
+.home-content{
+  background-color:  $royal;
+}
+
 .home-area{
   .slide-box-image{
     width: 100%;
     margin: auto;
     display: block;
-    border: 1px solid #fff;
   }
   .banner-text-area{
     display: block;
     height: 30px;
-    background-color: #000000;
+    background-color:  $royal;
     opacity: 0.6;
     margin: -30px 0px 0px 0px;
     padding: 5px 0px 0px 5px;
@@ -17,6 +20,37 @@
   .banner-text{
     color: #ffffff;
   }
+
+  .home-tile-row{
+    padding: 14px 0px 0px 0px;
+    background-color: $royal;
+    min-height: 50px;
+    position: relative;
+  }
+
+  .home-tile-row.activated{
+    background-color: $default-middle;
+  }
+
+  .tile-text{
+    margin: 0px 0px 0px 0px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+  .line-access-arrow{
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    font-size: 30px;
+    top: 50%;
+    margin: -15px 0px 0px 0px;
+  }
+
+
+
   .button-event{
     margin: 0px 0px 0px 0px;
   }

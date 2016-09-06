@@ -4,6 +4,9 @@ section.message-list{
   .item-message-list{
     padding: 10px 25px 10px 10px;
   }
+  .item-message-list.activated{
+    background-color: #ddd;
+  }
   .message-list-title{
     font-size: 16px;
     font-weight: 600;
@@ -14,7 +17,7 @@ section.message-list{
     right: 10px;
     font-size: 25px;
     margin: -12px 0px 0px 0px;
-    color: #6b46e5;
+    color: $default-color;
   }
 }
 

@@ -71,7 +71,26 @@ angular.module('mobile', ['ionic', 'ngCordova'])
                 controller: 'MessageDetailsCtrl'
             }
         }
-    }).state('app.colaboration', {
+    })
+    .state('app.missionary', {
+      url: '/missionary',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/missionaries.html',
+          controller: 'MissionaryListCtrl'
+        }
+      }
+    })
+    .state('app.missionary-details', {
+      url: '/missionary-details',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/missionary-details.html',
+          controller: 'MissionaryDetailsCtrl'
+        }
+      }
+    })
+      .state('app.colaboration', {
         url: '/colaboration',
         views: {
           'menuContent': {

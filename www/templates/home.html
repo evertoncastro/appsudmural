@@ -1,56 +1,30 @@
 <ion-view view-title="Mural" cache-view="true">
-  <ion-content>
+  <ion-content class="home-content">
     <div class="home-area" ng-if="showBox">
-      <ion-slide-box ng-if="eventList.length>0" show-pager="true" does-continue="true" auto-play="true" slide-interval="5000"
-                     on-slide-changed="slideHasChanged($index)" ng-if="eventList.length>0">
-        <ion-slide ng-repeat="event in eventList">
+      <ion-slide-box ng-if="bannerList.length>0" show-pager="true" does-continue="false" auto-play="true" slide-interval="5000"
+                     on-slide-changed="slideHasChanged($index)">
+        <ion-slide ng-repeat="banner in bannerList" ng-click="goToDetails(banner)">
             <div>
-                <img class="slide-box-image" ng-src="{{event.image}}" ng-click="goToEventDetails(event)">
+                <img class="slide-box-image" ng-src="{{banner.image}}">
                 <div class="banner-text-area">
-                  <span class="banner-text">{{event.title}}</span>
+                  <span class="banner-text">{{banner.title}}</span>
                 </div>
             </div>
         </ion-slide>
       </ion-slide-box>
-      <div class="home-list-access" ng-if="eventList.length>0">
-        <a class="item item-icon-left" ui-sref="app.events">
-          <i class="icon ion-ios-people-outline"></i>
-          Eventos & Atividades
-        </a>
-        <i class="home-access-arrow ion-ios-arrow-right"></i>
+      <div class="home-tile-row" ng-click="goToMessageList()">
+        <p class="tile-text">Mensagens</p>
+        <i class="line-access-arrow ion-ios-arrow-right"></i>
+      </div>
+      <div class="home-tile-row" ng-click="goToEventList()">
+        <p class="tile-text">Atividades & Eventos</p>
+        <i class="line-access-arrow ion-ios-arrow-right"></i>
       </div>
 
-      <div class="home-list-access-full" ng-if="eventList.length<1" ui-sref="app.events">
-        <img src="img/message_background.png" class="home-list-access-full-image">
+      <div class="home-list-access-full" ng-click="goToMissionaryList()">
+        <img src="http://i.imgur.com/2jW3io5.jpg" class="home-list-access-full-image">
         <a class="item item-icon-left">
-          Eventos & Atividades
-        </a>
-        <i class="home-access-arrow ion-ios-arrow-right"></i>
-      </div>
-
-      <ion-slide-box ng-if="messageList.length>0" show-pager="true" does-continue="true" auto-play="true" slide-interval="5000"
-                     on-slide-changed="slideHasChanged($index)" ng-if="messageList.length>0">
-        <ion-slide ng-repeat="message in messageList">
-          <div>
-            <img class="slide-box-image" ng-src="{{message.image}}" ng-click="goToMessageDetails(message)">
-            <div class="banner-text-area">
-              <span class="banner-text">{{message.title}}</span>
-            </div>
-          </div>
-        </ion-slide>
-      </ion-slide-box>
-      <div class="home-list-access" ng-if="messageList.length>0">
-        <a class="item item-icon-left" ng-click="goToMessageList()">
-          <i class="icon ion-document"></i>
-          Mensagens
-        </a>
-        <i class="home-access-arrow ion-ios-arrow-right"></i>
-      </div>
-
-      <div class="home-list-access-full" ng-if="messageList.length<1" ng-click="goToMessageList()">
-        <img src="img/message_background.png" class="home-list-access-full-image">
-        <a class="item item-icon-left">
-          Mensagens
+          Missionários
         </a>
         <i class="home-access-arrow ion-ios-arrow-right"></i>
       </div>
